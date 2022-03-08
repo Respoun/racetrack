@@ -1,6 +1,7 @@
 import sys
 import pymongo
 from pymongo import MongoClient
+from termcolor import colored, cprint
 
 class MongoDb:
     def __init__(self, database_name, database_host, database_username, database_password):

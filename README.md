@@ -58,4 +58,11 @@ Run the app :
 python3 main.py
 ```
 
+### Run tests
+
+Run all the tests in /tests folder and coverage report:
+```bash
+coverage run -m unittest discover -s tests -p "*_test.py" && coverage report
+```
+
 See you !
