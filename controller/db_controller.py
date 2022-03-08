@@ -45,7 +45,9 @@ class MongoDb:
 
     def update_one_horse(self, id_horse, name_horse, age_horse, wins):
         collection = self.database['horses']
-        cursor = collection.find_one_and_update({"id": id_horse}, {"$set": {"name": name_horse, "age": age_horse, "wins": wins}}, upsert=False)
+        cursor = collection.find_one_and_update({"id": id_horse}, 
+                                                {"$set": {"name": name_horse, "age": age_horse, "wins": wins}
+                                            }, upsert=False)
         return cursor
     
     def delete_one_horse(self, id_horse):
